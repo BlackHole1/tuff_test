@@ -254,6 +254,7 @@ jobs:
       - name: Build Tuff App
         shell: bash
         env:
+          ELECTRON_BUILDER_COMPRESSION_LEVEL: 5
           DEBUG: '*'
           GITHUB_SHA: ${{ github.sha }}
           TUFF_ENCRYPTION_KEY: ${{ secrets.TUFF_ENCRYPTION_KEY }}
