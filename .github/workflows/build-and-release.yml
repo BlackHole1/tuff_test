@@ -254,6 +254,7 @@ jobs:
       - name: Build Tuff App
         shell: bash
         env:
+          DEBUG: '*'
           GITHUB_SHA: ${{ github.sha }}
           TUFF_ENCRYPTION_KEY: ${{ secrets.TUFF_ENCRYPTION_KEY }}
           RELEASE_TYPE: ${{ steps.release-type.outputs.type }}
